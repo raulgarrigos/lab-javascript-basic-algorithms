@@ -68,7 +68,7 @@ let countWords = 0;
 let countEt = 0;
 
 for (let i = 0; i < words.length; i++) {
-  if (words[i] !== "") {
+  if (words[i] !== " ") {
     countWords++;
   }
 }
@@ -76,11 +76,24 @@ for (let i = 0; i < words.length; i++) {
 console.log(countWords);
 
 for (let i = 0; i < longText.length; i++) {
-  let word = words[i];
-
-  if (word === "et") {
+  let wordEt = words[i];
+  if (wordEt === "et") {
     countEt++;
   }
 }
 
 console.log(countEt);
+
+// Bonus 2
+
+let phraseToCheck = "arriba la birra";
+
+for (let i = 0; i < phraseToCheck.length / 2; i++) {
+  if (phraseToCheck[i] !== phraseToCheck.length - 1 - i) {
+    console.log("k?");
+  } else {
+    console.log("komo");
+  }
+}
+
+// lo he encontrado por google y he intentado hacer una versión que pudiese entender pero aún así, no entiendo nada
