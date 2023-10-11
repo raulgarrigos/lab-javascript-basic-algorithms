@@ -2,11 +2,11 @@ console.log("I'm ready");
 
 // Iteration 1: Names and Input
 
-let hacker1 = "Rodolfo";
+let hacker1 = "rodolfo";
 
 console.log(`The driver's name is ${hacker1}`);
 
-let hacker2 = "Ramón";
+let hacker2 = "ramón";
 
 console.log(`The navigator's name is ${hacker2}`);
 
@@ -39,16 +39,19 @@ let hacker2Reverse = "";
 
 for (let i = hacker2.length - 1; i >= 0; i--) {
   hacker2Reverse += hacker2[i];
-
   console.log(hacker2Reverse);
 }
 
-if (hacker1 < hacker2) {
-  console.log("The driver's name goes first.");
-} else if (hacker2 < hacker1) {
-  console.log("Yo, the navigator goes first definitely.");
-} else {
-  console.log("What?! You both have the same name?");
+for (let i = 0; i < hacker1.length && i < hacker2.length; i++) {
+  if (hacker1[i] < hacker2[i]) {
+    console.log("The driver's name goes first.");
+    break;
+  } else if (hacker2[i] < hacker1[i]) {
+    console.log("Yo, the navigator goes first definitely.");
+    break;
+  } else {
+    console.log("What?! You both have the same name?");
+  }
 }
 
 // Bonus Time!
